@@ -1,0 +1,26 @@
+﻿@page
+@model LuminaAi_v1._0._0.Pages.Chat.IndexModel
+@{
+    Layout = "_Layout";  // Use the layout defined above
+    ViewData["Title"] = "AI Chat";
+}
+
+<h2>Chat with AI</h2>
+
+<!-- Chat Container where messages will appear -->
+<div class="chat-container">
+    @foreach (var message in Model.ChatMessages)
+    {
+                <div class="chat-message @(message.Sender == "AI" ? "ai" : "user")">
+                    <strong>@message.Sender:</strong> <span>@message.Text</span>
+                </div>
+    }
+</div>
+
+<!-- Form to send a new message -->
+<form method="post">
+    <div class="input-group mt-3">
+        <input type="text" name="UserMessage" class="form-control" placeholder="Type your message" required />
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>

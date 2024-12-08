@@ -1,0 +1,195 @@
+﻿@page
+@{
+    ViewData["Title"] = "Learn More About Our AI";
+
+    var title = "Learn More About Our AI";
+    var introductionText = "Our AI isn’t just another machine learning tool; it’s a revolutionary platform designed to push the boundaries of what’s possible. Here’s a deeper dive into the unique features that set our AI apart:";
+
+    var features = new[]
+    {
+        new { Name = "Real-Time Decision Making", Description = "Our AI processes complex data at lightning speed, allowing for immediate and informed decision-making." },
+        new { Name = "Predictive Analytics", Description = "Utilizing advanced algorithms, our AI anticipates future events, offering valuable insights and actionable recommendations." },
+        new { Name = "Customizable Solutions", Description = "Our AI adapts to meet the unique needs of different users, offering a level of customization that ensures it works perfectly for you." }
+    };
+
+    var useCases = new[]
+    {
+        new { Industry = "Healthcare", Description = "AI-powered diagnostics, personalized treatments, and predictive healthcare solutions." },
+        new { Industry = "Finance", Description = "Fraud detection, predictive market analysis, and risk assessment to help financial institutions stay secure." },
+        new { Industry = "Retail", Description = "Customer behavior prediction, inventory optimization, and personalized shopping experiences." }
+    };
+
+    var technologies = new[]
+    {
+        new { Name = "Deep Learning", Description = "Our AI uses neural networks to mimic human brain functionality, recognizing patterns and making decisions autonomously." },
+        new { Name = "Natural Language Processing", Description = "Our AI understands, interprets, and generates human language, enabling text and voice-based applications." },
+        new { Name = "Computer Vision", Description = "Our AI can analyze visual data to recognize objects, faces, and key elements in images and videos." }
+    };
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+            padding-top: 0;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #343a40;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #343a40;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature-card, .use-case-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-card h3, .use-case-card h3 {
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p, .use-case-card p {
+            color: #666;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .use-case-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>@title</h1>
+        <p>@introductionText</p>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <div class="feature-list">
+                @foreach (var feature in features)
+                {
+                            <div class="feature-card">
+                                <h3>@feature.Name</h3>
+                                <p>@feature.Description</p>
+                            </div>
+                }
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Use Cases</h2>
+            <p>Our AI has been successfully applied across various industries:</p>
+            <div class="use-case-list">
+                @foreach (var useCase in useCases)
+                {
+                            <div class="use-case-card">
+                                <h3>@useCase.Industry</h3>
+                                <p>@useCase.Description</p>
+                            </div>
+                }
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technology Behind Our AI</h2>
+            <p>Our AI is powered by the following technologies:</p>
+            <ul>
+                @foreach (var tech in technologies)
+                {
+                            <li><strong>@tech.Name:</strong> @tech.Description</li>
+                }
+            </ul>
+        </div>
+
+        <a href="/Contact" class="cta-button">Contact Us for More Information</a> <!-- Updated link -->
+    </div>
+</body>
+</html>

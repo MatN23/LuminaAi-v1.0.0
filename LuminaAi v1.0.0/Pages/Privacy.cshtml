@@ -1,0 +1,101 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LuminaAi_v1._0._0</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LuminaAi_v1._0._0.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .privacy-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #007bff;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- No navbar, as requested -->
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h1>@ViewData["Title"]</h1>
+
+            <div class="privacy-content">
+                <p>At LuminaAi_v1._0._0, we value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, and protect your information when you use our services.</p>
+
+                <h2 class="section-title">1. Information We Collect</h2>
+                <p>We may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> When you sign up, make a purchase, or contact us, we may collect personal details such as your name, email address, and payment information.</li>
+                    <li><strong>Usage Data:</strong> We collect information about how you use our services, including IP addresses, browser types, and usage patterns.</li>
+                    <li><strong>Cookies:</strong> We use cookies to enhance your user experience and analyze website traffic. You can opt-out of cookies in your browser settings.</li>
+                </ul>
+
+                <h2 class="section-title">2. How We Use Your Information</h2>
+                <p>We use the information we collect for the following purposes:</p>
+                <ul>
+                    <li>To provide and improve our services</li>
+                    <li>To personalize your experience</li>
+                    <li>To communicate with you, including sending updates and promotional offers</li>
+                    <li>To analyze usage trends and monitor website performance</li>
+                    <li>To ensure the security and integrity of our platform</li>
+                </ul>
+
+                <h2 class="section-title">3. Data Protection</h2>
+                <p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee the absolute security of your data.</p>
+
+                <h2 class="section-title">4. Third-Party Services</h2>
+                <p>We do not sell, trade, or rent your personal information to third parties. However, we may share your data with trusted partners to help us operate our services, such as payment processors or email marketing providers. These partners are required to keep your information confidential and secure.</p>
+
+                <h2 class="section-title">5. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Request access to your personal information</li>
+                    <li>Request corrections or updates to your information</li>
+                    <li>Request the deletion of your personal information</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+
+                <h2 class="section-title">6. Changes to This Privacy Policy</h2>
+                <p>We reserve the right to update this privacy policy at any time. We will notify you of any changes by posting the new policy on this page and updating the "Effective Date" at the top of the policy.</p>
+
+                <h2 class="section-title">7. Contact Us</h2>
+                <p>If you have any questions or concerns about our privacy policy, please contact us at <strong>support@luminaai.com</strong>.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
